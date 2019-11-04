@@ -1,5 +1,6 @@
 package io.turntabl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -31,6 +32,52 @@ public class Register {
         }
 
         return name;
+    }
+
+    public void getClientCount(){
+        List<Client> gold = new ArrayList<>();
+        List<Client> plat = new ArrayList<>();
+        List<Client> pre = new ArrayList<>();
+
+        for (Client c : clients){
+            switch (c.getServiceLevel()){
+                case Gold:
+                    gold.add(c);
+                    break;
+                case Premium:
+                    pre.add(c);
+                    break;
+                case Platinum:
+                    plat.add(c);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        for (ServiceLevel level: ServiceLevel.values()){
+            switch (level){
+                case Platinum:
+                    System.out.println(level);
+                    System.out.println(plat.size());
+                    break;
+                case Premium:
+                    System.out.println(level);
+                    System.out.println(pre.size());
+
+
+                    break;
+                case Gold:
+                    System.out.println(level);
+                    System.out.println(gold.size());
+
+
+                    break;
+                default:
+                    break;
+            }
+        }
+
     }
 
 }

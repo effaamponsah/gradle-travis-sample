@@ -10,7 +10,7 @@ public class RegisterTest {
     CorporateClient cc1 = new CorporateClient("Jim", "TT123", ServiceLevel.Gold);
     CorporateClient cc2 = new CorporateClient("Christy", "TT123", ServiceLevel.Gold);
 
-    PrivateClient pc1 = new PrivateClient("Dennis", "TT233", ServiceLevel.Platinum);
+    PrivateClient pc1 = new PrivateClient("Dennis", "TT233", ServiceLevel.Premium);
     PrivateClient pc2 = new PrivateClient("Dennis", "TT233", ServiceLevel.Platinum);
 
     Register rg1 = new Register(Arrays.asList(cc1,pc1));
@@ -29,12 +29,16 @@ public class RegisterTest {
     }
 
     @Test
-    public void finClientByID(){
+    public void findClientByID(){
         Register rg1 = new Register(Arrays.asList(cc1));
         assertEquals("Jim", rg1.getClientNameById("TT123"));
     }
 
-
+    @Test
+    public void countClientsByLevel(){
+        Register rg1 = new Register(Arrays.asList(cc1,cc2,pc1,pc2));
+        rg1.getClientCount();
+    }
 
 
 }
