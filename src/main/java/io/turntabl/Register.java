@@ -19,4 +19,18 @@ public class Register {
         return names;
     }
 
+    public String getClientNameById(String ID) throws ClientNotFound{
+        String name =null;
+        for (Client c : clients){
+            if (c.getID() == ID){
+                name = c.getName();
+            }
+            else {
+                throw new ClientNotFound("No client with the ID Found");
+            }
+        }
+
+        return name;
+    }
+
 }

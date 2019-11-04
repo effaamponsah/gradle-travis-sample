@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.turntabl.RegisterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-11-04T11:26:32" hostname="ip-172-31-22-82" time="0.003">
+<testsuite name="io.turntabl.RegisterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-04T11:36:51" hostname="ip-172-31-22-82" time="0.001">
   <properties/>
-  <testcase name="getNameByLevel" classname="io.turntabl.RegisterTest" time="0.003"/>
-  <testcase name="listAllClients" classname="io.turntabl.RegisterTest" time="0.0"/>
+  <testcase name="finClientByID" classname="io.turntabl.RegisterTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

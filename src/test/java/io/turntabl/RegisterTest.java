@@ -24,8 +24,17 @@ public class RegisterTest {
 
     @Test
     public void getNameByLevel(){
-        ;
+
         assertEquals(Arrays.asList("Jim","Christy"),rg2.getClientNameByLevel(ServiceLevel.Gold));
     }
+
+    @Test
+    public void finClientByID(){
+        Register rg1 = new Register(Arrays.asList(cc1));
+        assertEquals("Jim", rg1.getClientNameById("TT123"));
+    }
+
+
+
 
 }
